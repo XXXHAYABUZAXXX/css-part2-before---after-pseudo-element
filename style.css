@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css?family=Unica+One|Vollkorn");
+body {
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Vollkorn";
+  line-height: 1.4;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Unica One";
+  text-transform: uppercase;
+  line-height: 0.9;
+  color: #c31;
+}
+
+h2 {
+  margin-top: 1.2em;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0.25em;
+}
+
+a {
+  color: #c31;
+}
+
+.intro {
+  font-size: 5rem;
+}
+
+blockquote {
+  font-size: 2rem;
+  color: black;
+}
+
+blockquote::before {
+  content: open-quote;
+}
+
+blockquote::after {
+  content: close-quote;
+}
+
+a[data-tool-tip] {
+  position: relative;
+}
+
+a[data-tool-tip]::after {
+  content: attr(data-tool-tip);
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  color: white;
+  padding: 1rem 3rem;
+  font-size: 0.8rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  white-space: nowrap;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: bottom ease-out 150ms, -webkit-transform ease-out 150ms;
+  transition: bottom ease-out 150ms, -webkit-transform ease-out 150ms;
+  transition: transform ease-out 150ms, bottom ease-out 150ms;
+  transition: transform ease-out 150ms, bottom ease-out 150ms, -webkit-transform ease-out 150ms;
+}
+
+a[data-tool-tip]:hover::after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  bottom: 100%;
+}
+
+.decorations {
+  padding: 7rem;
+}
+
+.decorations .section-with-deco::before {
+  content: " \f007";
+  font-family: "Font Awesome 5 Free";
+  display: block;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+
+.decorations a[href$=".pdf"]::after {
+  content: " \f1c1";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.decorations a[href^="http"]::after {
+  content: " \f35d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 13px;
+}
+
+.counters {
+  background: lightgray;
+  text-align: left;
+  padding: 5em 8em;
+  margin-top: 7em;
+  counter-reset: counter-name;
+}
+
+.counters .section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.counters .section::before {
+  counter-increment: counter-name;
+  content: counter(counter-name);
+  position: absolute;
+  left: -2.5rem;
+  background: white;
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.counters ol {
+  list-style: none;
+  counter-reset: orderlist;
+}
+
+.counters ol li::before {
+  counter-increment: orderlist;
+  content: "list-item" counter(orderlist) ") ";
+  color: #c31;
+}
+/*# sourceMappingURL=style.css.map */

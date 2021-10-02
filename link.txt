@@ -1,0 +1,2 @@
+CSS Before and After pseudo elements explained - part two: the content property
+https://www.youtube.com/watch?v=xoRbkm8XgfQ&list=RDCMUCJZv4d5rbIKd4QHMPkcABCw&index=2
